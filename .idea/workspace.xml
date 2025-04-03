@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5e7657c-68c1-42d7-a387-31c0054fd5dc" name="Changes" comment="enabled manual refresh">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/daily_card.yml" afterDir="false" />
+    <list default="true" id="f5e7657c-68c1-42d7-a387-31c0054fd5dc" name="Changes" comment="stashing local changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,17 +36,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Debug",
-    "Python.scryfall_api.executor": "Debug",
-    "Python.streamlit_app.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.scryfall_api.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.streamlit_app.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Timothy Liew\PycharmProjects\mtg_white_etl\app" />
@@ -185,7 +184,55 @@
       <option name="project" value="LOCAL" />
       <updated>1743648975164</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated github token">
+      <option name="closed" value="true" />
+      <created>1743653284912</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743653284912</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updating cards.db path">
+      <option name="closed" value="true" />
+      <created>1743653486897</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743653486897</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changed main to master">
+      <option name="closed" value="true" />
+      <created>1743658526465</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743658526465</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ensures workflow pulls the latest changes first before pushing new ones (card.db)">
+      <option name="closed" value="true" />
+      <created>1743659909367</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743659909367</updated>
+    </task>
+    <task id="LOCAL-00010" summary="removed debug">
+      <option name="closed" value="true" />
+      <created>1743660125772</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743660125772</updated>
+    </task>
+    <task id="LOCAL-00011" summary="stashing local changes">
+      <option name="closed" value="true" />
+      <created>1743660298614</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743660298614</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -194,7 +241,13 @@
     <MESSAGE value="added streamlit" />
     <MESSAGE value="set up docker stuff" />
     <MESSAGE value="enabled manual refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="enabled manual refresh" />
+    <MESSAGE value="Updated github token" />
+    <MESSAGE value="Updating cards.db path" />
+    <MESSAGE value="changed main to master" />
+    <MESSAGE value="ensures workflow pulls the latest changes first before pushing new ones (card.db)" />
+    <MESSAGE value="removed debug" />
+    <MESSAGE value="stashing local changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="stashing local changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
