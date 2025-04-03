@@ -26,11 +26,14 @@ jobs:
       - name: Run the script
         run: python app/daily_fetch.py
 
-      - name: Commit and push updated database
+      - name: Push changes using PAT
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add app/data/cards.db
-          git commit -m "Update daily card"
-          git push
-        continue-on-error: true  # Prevent failures if no new card was fetched
+          git remote set-url origin https://$GH_PAT@github.com/timothy-liew/mtg_white_etl.git
+          git add data/cards.db
+          git commit -m "Update daily card" || echo "No changes to commit"
+          git push origin main
+
