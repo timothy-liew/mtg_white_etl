@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5e7657c-68c1-42d7-a387-31c0054fd5dc" name="Changes" comment="set up docker stuff">
+    <list default="true" id="f5e7657c-68c1-42d7-a387-31c0054fd5dc" name="Changes" comment="enabled manual refresh">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/daily_card.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/daily_fetch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scryfall_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/scryfall_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/streamlit_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/streamlit_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cards.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/cards.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +44,8 @@
     "Python.streamlit_app.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -181,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743646584612</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="enabled manual refresh">
+      <option name="closed" value="true" />
+      <created>1743648975164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743648975164</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,16 +193,12 @@
     <MESSAGE value="created script to get card data and store it" />
     <MESSAGE value="added streamlit" />
     <MESSAGE value="set up docker stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up docker stuff" />
+    <MESSAGE value="enabled manual refresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="enabled manual refresh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/scryfall_api.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/daily_fetch.py</url>
           <line>8</line>

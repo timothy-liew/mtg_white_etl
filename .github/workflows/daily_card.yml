@@ -1,0 +1,36 @@
+name: Fetch Daily Card
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Runs every day at 12:00 UTC
+  workflow_dispatch:  # Allows manual runs from GitHub Actions UI
+
+jobs:
+  fetch_card:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run the script
+        run: python app/daily_fetch.py
+
+      - name: Commit and push updated database
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add app/data/cards.db
+          git commit -m "Update daily card"
+          git push
+        continue-on-error: true  # Prevent failures if no new card was fetched
