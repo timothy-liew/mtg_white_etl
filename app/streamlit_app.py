@@ -1,33 +1,32 @@
 import streamlit as st
-import sqlite3
-from db import get_today_card
+from db import DailyCardDatabase
+from daily_fetch import update_card_of_the_day
 
-DB_PATH = "../data/cards.db"
-
-def fetch_past_cards():
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    cursor.execute("SELECT name, date_shown, image_url FROM daily_card ORDER BY date_shown LIMIT 7")
-    past_cards = cursor.fetchall()
-    conn.close()
-    return past_cards
+db = DailyCardDatabase()
 
 
 st.title("Tim's Monowhite Card of the Day")
 
-card = get_today_card()
-if card:
-    st.subheader(f"Today's Card: {card[1]}")
-    st.image(card[3], width=400)
+if st.button("Refresh Card"):
+    update_card_of_the_day() # Updates database card
+    st.rerun()
+
+today_card = db.get_today_card()
+
+if today_card:
+    st.subheader(f"Today's Card: {today_card[1]}")
+    st.image(today_card[3], width=400)
 else:
     st.warning("No card has been selected for the day.")
 
 if st.button("View Past Cards"):
-    past_cards = fetch_past_cards()
+    past_cards = db.fetch_past_cards()
     if past_cards:
         st.subheader("Past Cards")
-        for name, date, img in past_cards:
-            st.write(f"**{name}** ({date})")
-            st.image(img, width=200)
+        columns = st.columns(len(past_cards))
+
+        for i, (name, date_shown, image_url) in enumerate(past_cards):
+            with columns[i]:  # Place each card in a separate column
+                st.image(image_url, caption=f"{name}, ({date_shown})", use_container_width=True)
     else:
         st.info("No past cards recorded")
