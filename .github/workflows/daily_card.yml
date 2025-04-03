@@ -26,22 +26,18 @@ jobs:
       - name: Run the script
         run: python app/daily_fetch.py
 
-      - name: Push changes using PAT
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://$GH_PAT@github.com/timothy-liew/mtg_white_etl.git
 
-          git fetch origin master 
-          git checkout master || git checkout -b master
+          git stash
+          git pull origin master --rebase
+          git stash pop || echo "No stashed changes to apply"
 
-          # Force-pull the latest changes before pushing
-          git pull origin master --rebase --strategy=ours
+          git add app/data/cards.db
 
-          git add app/data/cards.db || echo "No changes to commit"
           git commit -m "Update daily card" || echo "No changes to commit"
-          git push origin master || echo "Nothing to push"
+          git push origin master
 
 
