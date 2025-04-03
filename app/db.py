@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime
 
-DB_PATH = "../data/cards.db"
+DB_PATH = "data/cards.db"
 
 
 def init_db():

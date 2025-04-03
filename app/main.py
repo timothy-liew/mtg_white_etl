@@ -1,4 +1,4 @@
-from db import init_db, get_today_card, store_card
+from db import init_db, store_card
 from scryfall_api import fetch_random_white_card
 
 
