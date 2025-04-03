@@ -1,4 +1,5 @@
 import requests
+import time
 
 SCRYFALL_RANDOM_URL = "https://api.scryfall.com/cards/random?q=c%3Aw"
 
@@ -14,6 +15,7 @@ def fetch_random_white_card():
                     "name": data["name"],
                     "image_url": data["image_uris"]["normal"] if "image_uris" in data else None
                 }
+        time.sleep(1)
 
 
 if __name__ == "__main__":
