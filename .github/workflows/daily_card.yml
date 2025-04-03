@@ -33,7 +33,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git remote set-url origin https://$GH_PAT@github.com/timothy-liew/mtg_white_etl.git
-          git add data/cards.db
+          git add app/data/cards.db
           git commit -m "Update daily card" || echo "No changes to commit"
           git push origin main
 
