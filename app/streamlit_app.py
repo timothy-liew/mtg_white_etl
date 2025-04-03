@@ -7,9 +7,9 @@ db = DailyCardDatabase()
 
 st.title("Tim's Monowhite Card of the Day")
 
-if st.button("Refresh Card"):
-    update_card_of_the_day() # Updates database card
-    st.rerun()
+# if st.button("Refresh Card"):
+#     update_card_of_the_day() # Updates database card
+#     st.rerun()
 
 today_card = db.get_today_card()
 
